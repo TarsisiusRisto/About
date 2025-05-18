@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
     // protected $primaryKey = 'post_id';
     use HasFactory;
     protected $fillable = ['title', 'author', 'slug', 'body'];
+    protected $with = ['author', 'category']; // default eager loading
 
 
     public function author(): BelongsTo{
